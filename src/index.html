@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/vendor.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Форма регистрации</title>
+  </head>
+  <body>
+    <section>
+      <!-- registration form -->
+      <form class="form formSubmiting" id="registration" method="POST" target="_blank" novalidate>
+        <h1 class="form__title">Форма регистрации</h1>
+        <div class="form__group">
+          <!-- birthday -->
+          <input
+            class="form__input field date"
+            onclick="birthday.setAttribute('max', today.toISOString().substring(0, 10))"
+            autofocus
+            name="date"
+            min="1900-01-01"
+            max="2100-01-01"
+            type="date"
+            title="Возраст регистрации - не младше 18 лет"
+          />
+          <label class="form__label"> Дата рождения <span>(не младше 18 лет)</span></label>
+        </div>
+        <!-- first name -->
+        <div class="form__group">
+          <input
+            class="form__input field firstName"
+            name="firstname"
+            placeholder=" "
+            type="text"
+            title="Длина от 2 до 31 букв и символов ' - , ."
+          />
+          <label class="form__label"> Имя </label>
+        </div>
+        <!-- last name -->
+        <div class="form__group">
+          <input
+            class="form__input field lastName"
+            name="lastname"
+            placeholder=" "
+            type="text"
+            title="Длина от 2 до 31 букв и символов ' - , ."
+          />
+          <label class="form__label"> Фамилия </label>
+        </div>
+        <!-- email -->
+        <div class="form__group">
+          <input
+            class="form__input field email"
+            name="email"
+            placeholder=" "
+            maxlength="45"
+            type="email"
+            title="example@example.com"
+          />
+          <label class="form__label">Email (example@example.com)</label>
+        </div>
+        <!-- pasword -->
+        <div class="form__group">
+          <input
+            class="form__input field password"
+            name="password"
+            placeholder=" "
+            type="password"
+            title="не менее 8 символов, включая 1 цифру, спецсимвол, заглавную, строчную буквы"
+          />
+          <label class="form__label"> Пароль </label>
+        </div>
+        <!-- password confirm -->
+        <div class="form__group">
+          <input
+            class="form__input field passwordConfirm"
+            name="password"
+            placeholder=" "
+            type="password"
+            title="Повторите пароль "
+          />
+          <label class="form__label"> Повторите пароль </label>
+        </div>
+        <!-- submit button -->
+        <button type="submit" name="submit" class="form__button">Отправить</button>
+      </form>
+    </section>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
