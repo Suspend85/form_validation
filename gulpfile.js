@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gh-pages');
+const path = require('path');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
@@ -129,6 +130,7 @@ gulp.task(
   )
 );
 
-gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*').pipe(ghPages());
-});
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
+}
+exports.deploy = deploy;
