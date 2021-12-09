@@ -1,8 +1,8 @@
 .form {
   padding: 32px;
-  max-width: 450px;
-  display: block;
-  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
   border: 10px;
   box-shadow: 0 4px 16px #ccc;
   letter-spacing: 1px;
@@ -15,17 +15,16 @@
     text-align: center;
     margin: 0 0 32px 0;
     font-weight: normal;
+    text-transform: uppercase;
   }
   &__group {
     position: relative;
     margin-bottom: 30px;
   }
   &__input {
-    -webkit-appearance: none;
-    appearance: none;
+    height: 30px;
     outline: none;
     width: 100%;
-    padding-bottom: 5px;
     border: none;
     border-bottom: 1px solid #a8a8a8;
     background-color: transparent;
@@ -60,6 +59,7 @@
     border-radius: 5px;
     color: #fff;
     background-color: #0071f0;
+    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     &:hover {

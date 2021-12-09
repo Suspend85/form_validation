@@ -11,17 +11,15 @@
   <body>
     <section>
       <!-- registration form -->
-      <form class="form formSubmiting" id="registration" method="POST" target="_blank" novalidate>
+      <form class="form formSubmiting" action="#" enctype="multipart/form-data" novalidate>
         <h1 class="form__title">Форма регистрации</h1>
+        <!-- birthday -->
         <div class="form__group">
-          <!-- birthday -->
           <input
             class="form__input field date"
-            onclick="birthday.setAttribute('max', today.toISOString().substring(0, 10))"
             autofocus
             name="date"
             min="1900-01-01"
-            max="2100-01-01"
             type="date"
             title="Возраст регистрации - не младше 18 лет"
           />
@@ -33,6 +31,7 @@
             class="form__input field firstName"
             name="firstname"
             placeholder=" "
+            maxlength="31"
             type="text"
             title="Длина от 2 до 31 букв и символов ' - , ."
           />
@@ -44,6 +43,7 @@
             class="form__input field lastName"
             name="lastname"
             placeholder=" "
+            maxlength="31"
             type="text"
             title="Длина от 2 до 31 букв и символов ' - , ."
           />
@@ -55,7 +55,7 @@
             class="form__input field email"
             name="email"
             placeholder=" "
-            maxlength="45"
+            maxlength="255"
             type="email"
             title="example@example.com"
           />
@@ -68,7 +68,8 @@
             name="password"
             placeholder=" "
             type="password"
-            title="не менее 8 символов, включая 1 цифру, спецсимвол, заглавную, строчную буквы"
+            maxlength="255"
+            title="требования: не менее 8 символов, содержит цифру, спецсимвол, заглавную, строчную буквы"
           />
           <label class="form__label"> Пароль </label>
         </div>
@@ -76,10 +77,11 @@
         <div class="form__group">
           <input
             class="form__input field passwordConfirm"
-            name="password"
+            name="passwordConfirm"
             placeholder=" "
             type="password"
-            title="Повторите пароль "
+            maxlength="255"
+            title="Повторите пароль"
           />
           <label class="form__label"> Повторите пароль </label>
         </div>
@@ -87,7 +89,6 @@
         <button type="submit" name="submit" class="form__button">Отправить</button>
       </form>
     </section>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
