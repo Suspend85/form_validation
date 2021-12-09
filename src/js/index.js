@@ -82,7 +82,8 @@ const checkLastName = () => {
 
 /** checking the email for validation */
 const checkEmail = () => {
-  const reg = /.+@.+\..+/i;
+  const reg =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.value && !reg.test(String(email.value).toLowerCase())) {
     const error = generateError(`Введите корректный email`);
     email.parentElement.appendChild(error, email);
