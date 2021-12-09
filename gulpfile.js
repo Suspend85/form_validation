@@ -7,12 +7,10 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const htmlmin = require('gulp-htmlmin');
-const concatCss = require('gulp-concat-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const fileinclude = require('gulp-file-include');
 const babel = require('gulp-babel');
-const gitignore = require('gulp-gitignore');
 
 const { STYLE_LIBS, JS_LIBS } = require('./gulp.config');
 
@@ -106,7 +104,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('icons', function () {
-  return gulp.src('src/media/icons/**/*').pipe(gulp.dest('dist/media/icons'));
+  return gulp.src('src/assets/icons/**/*').pipe(gulp.dest('dist/assets/icons'));
 });
 
 gulp.task('images', function () {

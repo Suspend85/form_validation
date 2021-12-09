@@ -19,7 +19,6 @@ const generateError = (text) => {
   const error = document.createElement('div');
   error.className = 'error';
   error.style.color = 'red';
-  error.style.letterSpacing = '0.5px';
   error.style.fontSize = '13px';
   error.innerHTML = text;
   return error;
@@ -95,7 +94,7 @@ const checkPass = () => {
   const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{1,}$/,
     passLen = 8;
   if (password.value && !reg.test(String(password.value))) {
-    const error = generateError(`Пароль должен содержать минимум 1 цифру, спецсимвол, заглавную, строчную букву`);
+    const error = generateError(`Пароль должен содержать минимум 1 цифру, спецсимвол, заглавную, строчную букву.`);
     password.parentElement.appendChild(error, password);
   }
   if (password.value && password.value.length < passLen) {

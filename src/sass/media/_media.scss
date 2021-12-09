@@ -1,0 +1,27 @@
+@media only screen and (max-width: 425px) {
+  .form {
+    padding: 10px;
+    width: 400px;
+    border: 5px;
+    letter-spacing: 0.7px;
+    &__input {
+      font-size: 15px;
+    }
+    &__title {
+      margin: 0 0 27px 0;
+      font-size: 25px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .form {
+    padding: 7px;
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .form {
+    width: 305px;
+  }
+}

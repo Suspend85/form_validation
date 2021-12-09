@@ -1,8 +1,8 @@
 .form {
-  padding: 32px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 415px;
   border: 10px;
   box-shadow: 0 4px 16px #ccc;
   letter-spacing: 1px;
@@ -14,6 +14,7 @@
   &__title {
     text-align: center;
     margin: 0 0 32px 0;
+    font-size: 28px;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -48,10 +49,6 @@
     color: #aaa9a9;
     font-size: 15px;
     transition: 0.3s ease-in-out;
-    span {
-      font-size: 15px;
-      letter-spacing: 0.5px;
-    }
   }
   &__button {
     padding: 10px 20px;
