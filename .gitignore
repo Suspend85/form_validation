@@ -1,3 +1,6 @@
+# production
+/dist 
+
 .idea
 .vscode
 ТЗ.docx
